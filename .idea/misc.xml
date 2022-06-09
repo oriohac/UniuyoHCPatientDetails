@@ -11,6 +11,9 @@
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_users.xml" value="0.25" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_dispensers_form.xml" value="0.153125" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_nurse_form.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_patient_form.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/fragment_doctor_page.xml" value="0.22" />
       </map>
     </option>
