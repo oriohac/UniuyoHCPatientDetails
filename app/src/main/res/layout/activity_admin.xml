@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Admin">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:id="@+id/editTextTextPersonName9"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:hint="ID"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName9"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="351dp"
+        android:layout_height="65dp"
+
+        android:layout_marginTop="16dp"
+        android:background="@drawable/etborder"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        android:textColorHint="?attr/colorOnPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/dropdownbg"
+            android:entries="@array/users_list"
+            android:prompt="@string/users"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toTopOf="@+id/AdminAddUserbtn"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName8"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName8"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+
+        <Button
+            android:id="@+id/AdminAddUserbtn"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="24dp"
+            android:text="Add User"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/AdminUpdateUserbtn"
+            app:layout_constraintEnd_toEndOf="@+id/spinner"
+            app:layout_constraintStart_toStartOf="@+id/spinner"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <Button
+            android:id="@+id/AdminUpdateUserbtn"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="15dp"
+            android:text="Update User"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/AdminViewUserbtn"
+            app:layout_constraintEnd_toEndOf="@+id/AdminAddUserbtn"
+            app:layout_constraintStart_toStartOf="@+id/AdminAddUserbtn"
+            app:layout_constraintTop_toBottomOf="@+id/AdminAddUserbtn" />
+
+        <Button
+            android:id="@+id/AdminDeleteUserbtn"
+            android:layout_width="168dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="79dp"
+            android:text="Delete User"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/AdminViewUserbtn"
+            app:layout_constraintStart_toStartOf="@+id/AdminUpdateUserbtn"
+            app:layout_constraintTop_toBottomOf="@+id/AdminUpdateUserbtn" />
+
+        <Button
+            android:id="@+id/AdminViewUserbtn"
+            android:layout_width="168dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="79dp"
+            android:text="View User"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/AdminUpdateUserbtn"
+            app:layout_constraintStart_toEndOf="@+id/AdminDeleteUserbtn"
+            app:layout_constraintTop_toTopOf="@+id/AdminDeleteUserbtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

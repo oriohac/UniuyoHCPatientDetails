@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="12dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="4dp"
+            android:paddingBottom="4dp"
+            android:scrollbars="vertical"
+            android:text="2.3.2	Patient The patient is a person who is in need of medical treatment and visits the health worker. The patient wants to be treated as fast and as well as possible. Furthermore, he wants to be treated in confidentiality with maximum security to his personal data. In accordance with law, he must have the right to view his personal file and have the opportunity to erase (parts of) it. 2.3.3	Health Worker The health worker is the person or institute who treats the patient. To treat the patient, he will often need access to the medical history of the patient (of course only the relevant parts). In case of emergency a doctor may need immediately access to the patient's history, without having the time to ask permission. The health worker is responsible for documenting all the treatments (dossier duty) and he is also responsible for the security and accuracy of this data. 2.3.4	Insurance The Health Insurance wants information about the performed treatments, so they can verify that the compensation the patient claims is covered in his insurance and needs to be paid out. 2.3.5	Relations and Demands on PHRS In the PHRS we have to deal with one patient, one Health Insurance, and one or more Health Worker. All these parties want access to the PHRS, but not everyone is permitted to see all data. And this is very important, because physicians have sworn that they will 'keep secret everything a patient tells them in confidence' (Slob, 2005). An PHRS must be completely secured before a physician will enter data into it, because he can get into big trouble if anyone could access that data without authorization. On the other side, in case of an emergency a doctor might need access to the data, without having the time to ask permission. A patient also needs access to his complete PHRS to view, add or delete parts of it. Because a lot people might access the PHRS and because someone's health depends on it, we need a very good logging system, which records all activity according the PHRS (so that no one could change things in case of an insurance claim or a judicial investigation).  Roughly we can define a couple of demands on an PHR-system: 1.	A patient need access to his own PHR and must be able to allow access for physicians. 2.	A health worker must be able to access new data to the PHR this data must be accessible only for the Health Worker, the patient and people authorized by one of them. 3.	In case of an emergency, it has to be possible to ignore the rule above. 4.	Every action according the EHR must be logged and must be verifiable. 2.4 Phishing Phishing is a method of attempting to gain potentially valuable details, such as usernames, passwords or medical data, for malicious reasons, using targeted communications such as email or messaging in which the attacking party encourages recipients to click links to websites running malicious code or to download or install malware (The economic value of health care data: Harper EM, Nurs Adm Q. 2013). "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:paddingStart="12dp"
+            android:text="About"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

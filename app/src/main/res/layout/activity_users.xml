@@ -26,7 +26,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:columnCount="2"
-        android:rowCount="3">
+        android:rowCount="2">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/home"
@@ -57,7 +57,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home"
+                    android:text="About"
                     android:textAlignment="center"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -132,46 +132,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/nurse"
+            android:id="@+id/patient"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_face_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nurse"
-                    android:textAlignment="center"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/patient"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="8dp"
@@ -194,40 +160,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Patient"
-                    android:textAlignment="center"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/dispenser"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_row="2"
-            android:layout_rowWeight="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_gravity="fill"
-            android:layout_margin="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical|center_horizontal"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_sanitizer_24" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Dispenser"
                     android:textAlignment="center"
                     android:textStyle="bold" />
             </LinearLayout>

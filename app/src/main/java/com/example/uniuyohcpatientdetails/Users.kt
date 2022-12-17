@@ -3,39 +3,37 @@ package com.example.uniuyohcpatientdetails
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowManager
-import kotlinx.android.synthetic.main.activity_users.*
+import com.example.uniuyohcpatientdetails.databinding.ActivityUsersBinding
+
 
 class Users : AppCompatActivity() {
+    private lateinit var binding: ActivityUsersBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_users)
-        home.setOnClickListener {
+        binding = ActivityUsersBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+
+        binding.home.setOnClickListener {
             gohome()
         }
-        admin.setOnClickListener {
+        binding.admin.setOnClickListener {
             goadmin()
         }
-        doctor.setOnClickListener {
+        binding.doctor.setOnClickListener {
             godoctor()
         }
-        nurse.setOnClickListener {
-            gonurse()
+        binding.patient.setOnClickListener {
+            login()
         }
-        patient.setOnClickListener {
-            gopatient()
-        }
-        dispenser.setOnClickListener {
-            godispenser()
-        }
+
     }
 
 
 
     fun gohome(){
-        val intent = Intent (applicationContext, Users::class.java)
+        val intent = Intent (applicationContext, About::class.java)
         startActivity(intent)
     }
     fun goadmin(){
@@ -43,19 +41,16 @@ class Users : AppCompatActivity() {
         startActivity(intent)
     }
     fun godoctor() {
-        val intent = Intent(applicationContext, DoctorPage::class.java)
+        val intent = Intent(applicationContext, Doctor::class.java)
         startActivity(intent)
     }
-    fun gonurse() {
-        val intent = Intent(applicationContext, Nurse::class.java)
-        startActivity(intent)
-    }
+
     fun gopatient() {
         val intent = Intent(applicationContext, Patient::class.java)
         startActivity(intent)
     }
-    fun godispenser() {
-        val intent = Intent(applicationContext, Dispenser::class.java)
+    fun login(){
+        val intent = Intent(applicationContext, Login::class.java)
         startActivity(intent)
     }
 

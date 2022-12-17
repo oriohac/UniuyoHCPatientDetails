@@ -6,11 +6,16 @@
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/drawable/darken.xml" value="0.1765" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/drawable/ic_launcher_background.xml" value="0.154" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_admin.xml" value="0.15" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_dispenser.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_doctor.xml" value="0.22" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_doctor_page.xml" value="0.25" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_doctors_dispenser_form.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_doctors_nurse_form.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_doctors_patient_form.xml" value="0.18873375060182956" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_users.xml" value="0.25" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_patient.xml" value="0.1" />
+        <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/activity_users.xml" value="0.1" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_dispensers_form.xml" value="0.153125" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_nurse_form.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Chikezirim/AndroidStudioProjects/UniuyoHCPatientDetails/app/src/main/res/layout/doctors_patient_form.xml" value="0.20416666666666666" />
@@ -23,5 +28,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.15" />
+      </ProjectState>
+    </option>
   </component>
 </project>

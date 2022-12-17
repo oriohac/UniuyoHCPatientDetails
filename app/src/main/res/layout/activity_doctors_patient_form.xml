@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".doctors_patient_form"
+    tools:layout_editor_absoluteY="25dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/editTextTextPersonName7"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Symptom"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName5"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Diagnosis"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Illness Name"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Diet To Follow"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Diet To Avoid"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="350dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Required Weight"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnnexttodisf"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+        <Button
+            android:id="@+id/btnnexttodisf"
+            android:layout_width="151dp"
+            android:layout_height="58dp"
+            android:layout_marginBottom="53dp"
+            android:text="Next"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

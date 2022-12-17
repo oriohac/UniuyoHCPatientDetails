@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewPatientDiagnosis">
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="351dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:text="Health Record"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName14"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Blood Group"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName15"
+            app:layout_constraintEnd_toEndOf="@+id/textView31"
+            app:layout_constraintStart_toStartOf="@+id/textView31"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName15"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Genotype"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName16"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName14"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName14"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName16"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Disabilities"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName18"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName15"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName15"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName18"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Allergies"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName17"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName16"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName16"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName16" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName17"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Terminal Illness"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/textView32"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName18"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName18"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="351dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="20dp"
+            android:text="Diagnosis"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView33"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName17"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName17"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="351dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            android:text="Vitals"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintEnd_toEndOf="@+id/textView32"
+            app:layout_constraintStart_toStartOf="@+id/textView32"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Temperature"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName21"
+            app:layout_constraintEnd_toEndOf="@+id/textView33"
+            app:layout_constraintStart_toStartOf="@+id/textView33"
+            app:layout_constraintTop_toBottomOf="@+id/textView33" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName21"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Pulse Rate"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName20"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName20"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Respiration Rate"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName19"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName21"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName21"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName21" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName19"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Blood Pressure"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/textView34"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName20"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName20"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName20" />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="351dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            android:text="Symptoms"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName24"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName19"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName19"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName19" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName24"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Symptom 1"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName23"
+            app:layout_constraintEnd_toEndOf="@+id/textView34"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
+            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName23"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Symptom 2"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName22"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName24"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName24"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName24" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName22"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Symptom 3"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/textView35"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName23"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName23"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName23" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="351dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="12dp"
+            android:text="Illness"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName25"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName22"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName22"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName22" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName25"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Illness"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/updatePatientDiagnosisbtn"
+            app:layout_constraintEnd_toEndOf="@+id/textView35"
+            app:layout_constraintStart_toStartOf="@+id/textView35"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <Button
+            android:id="@+id/updatePatientDiagnosisbtn"
+            android:layout_width="351dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="60dp"
+            android:text="Save Records"
+            android:textSize="16sp"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName25"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName25"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
