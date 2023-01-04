@@ -13,11 +13,11 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.loginbtn.setOnClickListener {
-            gotopatient()
+            gotoOtp()
         }
     }
-    fun gotopatient(){
-        val intent = Intent(applicationContext, Patient::class.java)
+    fun gotoOtp(){
+        val intent = Intent(applicationContext, OTP::class.java)
         startActivity(intent)
     }
 

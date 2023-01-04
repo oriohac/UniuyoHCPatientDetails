@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498462739072",
+    "project_id": "uniuyohcpatientdetails",
+    "storage_bucket": "uniuyohcpatientdetails.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498462739072:android:af12a9e69ac53882fd3465",
+        "android_client_info": {
+          "package_name": "com.example.uniuyohcpatientdetails"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498462739072-n1dupi5t3m8ntn19elrlbvnr37anedfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwSBRD46Slqu-IKBaB7bcdHQv44hUlnQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498462739072-n1dupi5t3m8ntn19elrlbvnr37anedfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

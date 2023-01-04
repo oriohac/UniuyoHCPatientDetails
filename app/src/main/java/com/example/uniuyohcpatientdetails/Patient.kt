@@ -1,15 +1,45 @@
 package com.example.uniuyohcpatientdetails
 
+import android.app.KeyguardManager
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.hardware.biometrics.BiometricPrompt
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CancellationSignal
+import android.widget.Toast
+import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
 import com.example.uniuyohcpatientdetails.databinding.ActivityPatientBinding
 
 class Patient : AppCompatActivity() {
     private lateinit var binding: ActivityPatientBinding
+
+    private var cancellationSignal: CancellationSignal? = null
+    private val  authenticationCallback: BiometricPrompt.AuthenticationCallback
+        get() =
+            @RequiresApi(Build.VERSION_CODES.P)
+            object: BiometricPrompt.AuthenticationCallback() {
+                override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
+                    super.onAuthenticationError(errorCode, errString)
+                    notifyUser("Authentication error: $errString")
+                }
+                override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
+                    super.onAuthenticationSucceeded(result)
+                    notifyUser("Authentication Success!")
+                    startActivity(Intent(this@Patient, Patient::class.java))
+                }
+            }
+    @RequiresApi(Build.VERSION_CODES.P)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patient)
+
+        checkBiometricSupport()
         binding = ActivityPatientBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -17,7 +47,17 @@ class Patient : AppCompatActivity() {
             movetoeditrecords()
         }
         binding.PatientViewRecordbtn.setOnClickListener {
-            viewhealthrecords()
+            val biometricPrompt : BiometricPrompt = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                BiometricPrompt.Builder(this)
+                    .setTitle("Title")
+                    .setSubtitle("Authenticaion is required")
+                    .setDescription("Fingerprint Authentication")
+                    .setNegativeButton("Cancel", this.mainExecutor, DialogInterface.OnClickListener { dialog, which ->
+                    }).build()
+            } else {
+                TODO("VERSION.SDK_INT < P")
+            }
+            biometricPrompt.authenticate(getCancellationSignal(), mainExecutor, authenticationCallback)
         }
     }
     fun movetoeditrecords(){
@@ -28,4 +68,35 @@ class Patient : AppCompatActivity() {
         val intent = Intent(applicationContext, HealthRecord::class.java)
         startActivity(intent)
     }
+
+
+    private fun notifyUser(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+    private fun getCancellationSignal(): CancellationSignal {
+        cancellationSignal = CancellationSignal()
+        cancellationSignal?.setOnCancelListener {
+            notifyUser("Authentication was cancelled by the user")
+        }
+        return cancellationSignal as CancellationSignal
+    }
+    private fun checkBiometricSupport(): Boolean {
+        val keyguardManager : KeyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+        if(!keyguardManager.isKeyguardSecure) {
+            notifyUser("Fingerprint hs not been enabled in settings.")
+            return false
+        }
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.USE_BIOMETRIC) != PackageManager.PERMISSION_GRANTED) {
+            notifyUser("Fingerprint hs not been enabled in settings.")
+            return false
+        }
+        return if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {
+            true
+        } else true
+    }
+
 }
+
+
+
+

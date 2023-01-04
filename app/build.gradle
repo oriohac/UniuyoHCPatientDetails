@@ -52,4 +52,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
 //    apply plugin: 'kotlin-android-extensions'
+    implementation 'androidx.biometric:biometric:1.1.0'
 }

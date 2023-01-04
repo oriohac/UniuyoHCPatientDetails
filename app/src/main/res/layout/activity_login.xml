@@ -20,8 +20,8 @@
             android:layout_marginBottom="16dp"
             android:background="@drawable/etborder"
             android:ems="10"
-            android:hint="Name"
-            android:inputType="textPersonName"
+            android:hint="Phone"
+            android:inputType="phone"
             android:paddingLeft="10dp"
             app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +72,7 @@
             app:layout_constraintStart_toStartOf="@+id/loginbtn"
             app:layout_constraintTop_toBottomOf="@+id/loginbtn"
             app:layout_constraintVertical_bias="1.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
