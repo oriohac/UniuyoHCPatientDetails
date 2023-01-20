@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "498462739072-8nsvedffh42mvss9no482qkoderiimhq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uniuyohcpatientdetails",
+            "certificate_hash": "549874b665a6f4a13bb1bd646b6d19bd07b0c77b"
+          }
+        },
+        {
           "client_id": "498462739072-n1dupi5t3m8ntn19elrlbvnr37anedfk.apps.googleusercontent.com",
           "client_type": 3
         }

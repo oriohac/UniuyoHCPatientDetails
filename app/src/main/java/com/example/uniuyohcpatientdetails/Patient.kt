@@ -1,6 +1,7 @@
 package com.example.uniuyohcpatientdetails
 
 import android.app.KeyguardManager
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -10,14 +11,21 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CancellationSignal
+import android.util.Log
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import com.example.uniuyohcpatientdetails.databinding.ActivityPatientBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class Patient : AppCompatActivity() {
     private lateinit var binding: ActivityPatientBinding
-
+    private lateinit var db: DocumentReference
+    private  lateinit var firestore: FirebaseFirestore
     private var cancellationSignal: CancellationSignal? = null
     private val  authenticationCallback: BiometricPrompt.AuthenticationCallback
         get() =
@@ -30,7 +38,7 @@ class Patient : AppCompatActivity() {
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult?) {
                     super.onAuthenticationSucceeded(result)
                     notifyUser("Authentication Success!")
-                    startActivity(Intent(this@Patient, Patient::class.java))
+                    startActivity(Intent(this@Patient, HealthRecord::class.java))
                 }
             }
     @RequiresApi(Build.VERSION_CODES.P)
@@ -38,6 +46,8 @@ class Patient : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_patient)
+
+        retrieveData()
 
         checkBiometricSupport()
         binding = ActivityPatientBinding.inflate(layoutInflater)
@@ -59,6 +69,37 @@ class Patient : AppCompatActivity() {
             }
             biometricPrompt.authenticate(getCancellationSignal(), mainExecutor, authenticationCallback)
         }
+    }
+
+
+
+
+
+    fun retrieveData(){
+        val auth = FirebaseAuth.getInstance()
+        val uid = auth.currentUser!!.uid
+        val db = Firebase.firestore
+        val userRef = db.collection("USERS")
+        userRef.document(uid).get().addOnSuccessListener {
+            if (it != null) {
+
+
+                val email = it.data?.get("Email")?.toString()
+                val name = it.data?.get("Name")?.toString()
+                val phone = it.data?.get("Phone")?.toString()
+                Log.d(TAG, "$email/$name/$phone")
+                binding.patientemail.text = email
+                binding.patientname.text = name
+                binding.patientPhone.text = phone
+
+
+        }else{
+
+                Log.w(TAG, "Error getting documents.")
+        }
+
+        }
+
     }
     fun movetoeditrecords(){
         val intent = Intent(applicationContext, patientrecordupdate::class.java)
@@ -96,7 +137,6 @@ class Patient : AppCompatActivity() {
     }
 
 }
-
 
 
 

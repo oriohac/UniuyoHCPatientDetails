@@ -9,43 +9,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName9"
-            android:layout_width="351dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/etborder"
-            android:ems="10"
-            android:hint="ID"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/adminemail"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="351dp"
             android:layout_height="65dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/etborder"
             android:ems="10"
             android:hint="Email"
             android:inputType="text"
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName8"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName9"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName9"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName9" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName8"
+        android:id="@+id/adminname"
         style="@style/Widget.AppCompat.EditText"
         android:layout_width="351dp"
         android:layout_height="65dp"
@@ -58,13 +42,13 @@
         android:inputType="textPersonName"
         android:paddingLeft="10dp"
         android:textColorHint="?attr/colorOnPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintBottom_toTopOf="@+id/adminusers"
+        app:layout_constraintEnd_toEndOf="@+id/adminpassword"
+        app:layout_constraintStart_toStartOf="@+id/adminpassword"
+        app:layout_constraintTop_toBottomOf="@+id/adminpassword" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/adminusers"
             android:layout_width="351dp"
             android:layout_height="65dp"
             android:layout_marginTop="16dp"
@@ -72,9 +56,9 @@
             android:entries="@array/users_list"
             android:prompt="@string/users"
             android:spinnerMode="dropdown"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName8"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName8"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+            app:layout_constraintEnd_toEndOf="@+id/adminname"
+            app:layout_constraintStart_toStartOf="@+id/adminname"
+            app:layout_constraintTop_toBottomOf="@+id/adminname" />
 
         <Button
             android:id="@+id/AdminAddUserbtn"
@@ -110,7 +94,7 @@
             android:layout_height="65dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="15dp"
-            android:layout_marginBottom="79dp"
+            android:layout_marginBottom="32dp"
             android:text="Delete User"
             android:textSize="16sp"
             app:cornerRadius="15dp"
@@ -123,7 +107,7 @@
             android:id="@+id/AdminViewUserbtn"
             android:layout_width="168dp"
             android:layout_height="65dp"
-            android:layout_marginBottom="79dp"
+            android:layout_marginBottom="32dp"
             android:text="View User"
             android:textSize="16sp"
             app:cornerRadius="15dp"
@@ -144,9 +128,25 @@
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@id/AdminAddUserbtn"
-            app:layout_constraintEnd_toEndOf="@+id/spinner"
-            app:layout_constraintStart_toStartOf="@+id/spinner"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintEnd_toEndOf="@+id/adminusers"
+            app:layout_constraintStart_toStartOf="@+id/adminusers"
+            app:layout_constraintTop_toBottomOf="@+id/adminusers" />
+
+        <EditText
+            android:id="@+id/adminpassword"
+            android:layout_width="351dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textColorHint="?attr/colorOnPrimary"
+            app:layout_constraintBottom_toTopOf="@id/adminname"
+            app:layout_constraintEnd_toEndOf="@+id/adminemail"
+            app:layout_constraintStart_toStartOf="@+id/adminemail"
+            app:layout_constraintTop_toBottomOf="@id/adminemail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
