@@ -26,20 +26,20 @@
             android:id="@+id/textView19"
             android:layout_width="351dp"
             android:layout_height="50dp"
-            android:layout_marginStart="27dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="33dp"
             android:gravity="bottom"
             android:text="Basic Details"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName13"
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdateName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName13"
+            android:id="@+id/patientUpdateName"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="351dp"
             android:layout_height="50dp"
@@ -52,13 +52,13 @@
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress2"
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdateEmail"
             app:layout_constraintEnd_toEndOf="@+id/textView19"
             app:layout_constraintStart_toStartOf="@+id/textView19"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress2"
+            android:id="@+id/patientUpdateEmail"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="351dp"
             android:layout_height="50dp"
@@ -69,13 +69,13 @@
             android:inputType="text"
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextDate"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName13"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName13"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName13" />
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdateDOB"
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdateName"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdateName"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdateName" />
 
         <EditText
-            android:id="@+id/editTextDate"
+            android:id="@+id/patientUpdateDOB"
             android:layout_width="351dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -85,13 +85,13 @@
             android:inputType="date"
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName12"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdateID"
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdateEmail"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdateEmail"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdateEmail" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName12"
+            android:id="@+id/patientUpdateID"
             android:layout_width="351dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -101,13 +101,13 @@
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
-            app:layout_constraintEnd_toEndOf="@+id/editTextDate"
-            app:layout_constraintStart_toStartOf="@+id/editTextDate"
-            app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdatePhone"
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdateDOB"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdateDOB"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdateDOB" />
 
         <EditText
-            android:id="@+id/editTextPhone"
+            android:id="@+id/patientUpdatePhone"
             android:layout_width="351dp"
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
@@ -117,13 +117,13 @@
             android:paddingLeft="10dp"
             android:inputType="phone"
             android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName11"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName12"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName12"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName12" />
+            app:layout_constraintBottom_toTopOf="@+id/patientUpdateBloodGroup"
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdateID"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdateID"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdateID" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName11"
+            android:id="@+id/patientUpdateBloodGroup"
             style="@style/Widget.AppCompat.EditText"
             android:layout_width="351dp"
             android:layout_height="50dp"
@@ -137,9 +137,9 @@
             android:paddingLeft="10dp"
             android:textColorHint="?attr/colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@+id/patientRecordUpdatebtn"
-            app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
-            app:layout_constraintStart_toStartOf="@+id/editTextPhone"
-            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdatePhone"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdatePhone"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdatePhone" />
 
         <Button
             android:id="@+id/patientRecordUpdatebtn"
@@ -150,9 +150,9 @@
             android:text="Save Records"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName11"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+            app:layout_constraintEnd_toEndOf="@+id/patientUpdateBloodGroup"
+            app:layout_constraintStart_toStartOf="@+id/patientUpdateBloodGroup"
+            app:layout_constraintTop_toBottomOf="@+id/patientUpdateBloodGroup" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

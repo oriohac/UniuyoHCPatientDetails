@@ -2,10 +2,11 @@
     <string name="app_name">UniuyoHCPatientDetails</string>
     <string name="title_activity_about">About</string>
 
-    <string name="users"><i>Select User</i></string>
+    <string name="users">Select User</string>
     <string-array name="users_list">
-        <item>Admin</item>
-        <item>Doctor</item>
-        <item>Patient</item>
+        <item id="1">Select User Type</item>
+        <item id="2">Admin</item>
+        <item id="3">Doctor</item>
+        <item id="4">Patient</item>
     </string-array>
 </resources>

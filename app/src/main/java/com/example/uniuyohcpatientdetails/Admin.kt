@@ -1,12 +1,11 @@
 package com.example.uniuyohcpatientdetails
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.uniuyohcpatientdetails.databinding.ActivityAdminBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -44,15 +43,17 @@ fun store(){
     if ( binding.adminemail.text.toString().isNotEmpty() && binding.adminname.text.toString().isNotEmpty() && binding.adminusers.toString().isNotEmpty() && binding.adminPhone.text.toString().isNotEmpty() ){
         try {
 
+            val id: String = FirebaseAuth.getInstance().currentUser!!.uid
             val appUsers = hashMapOf(
                 "Email" to binding.adminemail.text.toString(),
                 "Name" to binding.adminname.text.toString(),
                 "User" to binding.adminusers.selectedItem.toString(),
-                "Phone" to binding.adminPhone.text.toString()
+                "Phone" to binding.adminPhone.text.toString(),
+                "Uid" to id
             )
             val db = Firebase.firestore
-            val userRef = db.collection("USERS")
-            userRef.add(appUsers).addOnSuccessListener {
+            val userRef = db.collection("USERS").document(id)
+            userRef.set(appUsers).addOnSuccessListener {
                 Toast.makeText( applicationContext,"Details Uploaded Successfully", Toast.LENGTH_SHORT).show()
                 binding.adminemail.text.clear()
                 binding.adminname.text.clear()
@@ -68,6 +69,7 @@ fun store(){
         Toast.makeText(applicationContext, "Fill all fields", Toast.LENGTH_SHORT).show()
     }
 }
+
 
 
 }

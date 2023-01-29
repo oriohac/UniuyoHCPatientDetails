@@ -78,24 +78,33 @@ class Patient : AppCompatActivity() {
     fun retrieveData(){
         val auth = FirebaseAuth.getInstance()
         val uid = auth.currentUser!!.uid
+        println("$uid")
         val db = Firebase.firestore
         val userRef = db.collection("USERS")
         userRef.document(uid).get().addOnSuccessListener {
-            if (it != null) {
+            if (it.exists()) {
 
 
-                val email = it.data?.get("Email")?.toString()
-                val name = it.data?.get("Name")?.toString()
-                val phone = it.data?.get("Phone")?.toString()
+                val email = it.getString("Email").toString()
+                val name = it.getString("Name").toString()
+                val phone = it.getString("Phone").toString()
+                val dob = it.getString("DOB").toString()
+                val id = it.getString("ID").toString()
+                val bloodGroup = it.getString("BloodGroup").toString()
                 Log.d(TAG, "$email/$name/$phone")
                 binding.patientemail.text = email
                 binding.patientname.text = name
                 binding.patientPhone.text = phone
+                binding.patientDOB.text = dob
+                binding.patientID.text = id
+                binding.patientBloodGroup.text =bloodGroup
 
+            }
 
-        }else{
+        else{
 
                 Log.w(TAG, "Error getting documents.")
+
         }
 
         }

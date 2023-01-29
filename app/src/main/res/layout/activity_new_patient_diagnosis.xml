@@ -116,6 +116,7 @@
             android:textColorHint="?attr/colorOnPrimary"
             app:layout_constraintBottom_toTopOf="@+id/textView32"
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName18"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName18"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName18" />
 
