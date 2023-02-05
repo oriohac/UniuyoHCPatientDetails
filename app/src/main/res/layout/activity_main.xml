@@ -11,7 +11,7 @@
         android:layout_width="249dp"
         android:layout_height="73dp"
         android:fontFamily="sans-serif-black"
-        android:text="HealthRec"
+        android:text="SHR"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="42sp"

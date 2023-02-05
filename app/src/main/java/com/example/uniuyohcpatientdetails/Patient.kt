@@ -78,7 +78,6 @@ class Patient : AppCompatActivity() {
     fun retrieveData(){
         val auth = FirebaseAuth.getInstance()
         val uid = auth.currentUser!!.uid
-        println("$uid")
         val db = Firebase.firestore
         val userRef = db.collection("USERS")
         userRef.document(uid).get().addOnSuccessListener {
@@ -89,15 +88,14 @@ class Patient : AppCompatActivity() {
                 val name = it.getString("Name").toString()
                 val phone = it.getString("Phone").toString()
                 val dob = it.getString("DOB").toString()
-                val id = it.getString("ID").toString()
-                val bloodGroup = it.getString("BloodGroup").toString()
+
+
                 Log.d(TAG, "$email/$name/$phone")
                 binding.patientemail.text = email
                 binding.patientname.text = name
                 binding.patientPhone.text = phone
                 binding.patientDOB.text = dob
-                binding.patientID.text = id
-                binding.patientBloodGroup.text =bloodGroup
+
 
             }
 
@@ -111,7 +109,7 @@ class Patient : AppCompatActivity() {
 
     }
     fun movetoeditrecords(){
-        val intent = Intent(applicationContext, patientrecordupdate::class.java)
+        val intent = Intent(applicationContext, patientrecordupdate::class.java).putExtra("NameString", binding.patientname.text.toString())
         startActivity(intent)
     }
     fun viewhealthrecords(){

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +8,9 @@
     tools:context=".Users">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/userslay"
-        >
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <Spinner
             android:id="@+id/loginUsers"
@@ -22,7 +21,7 @@
             android:entries="@array/users_list"
             android:prompt="@string/users"
             android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+            app:layout_constraintBottom_toTopOf="@+id/loginphone"
             app:layout_constraintEnd_toEndOf="@+id/loginPassword"
             app:layout_constraintStart_toStartOf="@+id/loginPassword"
             app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
@@ -36,9 +35,9 @@
             android:textSize="16sp"
             app:cornerRadius="15dp"
             app:layout_constraintBottom_toTopOf="@+id/textView23"
-            app:layout_constraintEnd_toEndOf="@+id/loginUsers"
-            app:layout_constraintStart_toStartOf="@+id/loginUsers"
-            app:layout_constraintTop_toBottomOf="@+id/loginUsers" />
+            app:layout_constraintEnd_toEndOf="@+id/loginphone"
+            app:layout_constraintStart_toStartOf="@+id/loginphone"
+            app:layout_constraintTop_toBottomOf="@+id/loginphone" />
 
         <EditText
             android:id="@+id/loginPassword"
@@ -52,7 +51,6 @@
             android:paddingLeft="10dp"
             app:layout_constraintBottom_toTopOf="@+id/loginUsers"
             app:layout_constraintEnd_toEndOf="@+id/loginemail"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/loginemail"
             app:layout_constraintTop_toBottomOf="@+id/loginemail" />
 
@@ -60,33 +58,35 @@
             android:id="@+id/loginemail"
             android:layout_width="280dp"
             android:layout_height="60dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="66dp"
             android:background="@drawable/etborder"
             android:ems="10"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             app:layout_constraintBottom_toTopOf="@+id/loginPassword"
-            app:layout_constraintEnd_toEndOf="@+id/loginphone"
-            app:layout_constraintStart_toStartOf="@+id/loginphone"
-            app:layout_constraintTop_toBottomOf="@+id/loginphone" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
         <EditText
             android:id="@+id/loginphone"
             android:layout_width="280dp"
             android:layout_height="60dp"
-            android:layout_marginStart="67dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="64dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/etborder"
             android:ems="10"
             android:hint="Phone"
             android:inputType="phone"
             android:paddingLeft="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/loginemail"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+            app:layout_constraintEnd_toEndOf="@+id/loginUsers"
+            app:layout_constraintStart_toStartOf="@+id/loginUsers"
+            app:layout_constraintTop_toBottomOf="@+id/loginUsers"
+            tools:visibility="gone" />
 
         <TextView
             android:id="@+id/textView23"
@@ -106,11 +106,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginStart="67dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="67dp"
+            android:layout_marginStart="143dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="143dp"
             android:fontFamily="sans-serif"
-            android:text="Welcome to Our App"
+            android:text="Welcome"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView21"
@@ -122,8 +122,8 @@
             android:id="@+id/forgotPassword"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="48dp"
             android:clickable="true"
             android:gravity="center_vertical"
             android:paddingLeft="4dp"
@@ -140,24 +140,17 @@
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="13dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="12dp"
             android:gravity="center"
             android:text="Proceed To Access The Features According to Your User Type"
             android:textAlignment="center"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/loginphone"
+            app:layout_constraintBottom_toTopOf="@+id/loginemail"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_view" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <include
-        android:id="@+id/confirmOtp"
-        layout="@layout/confirmotp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible" />
-
-</RelativeLayout>
+</ScrollView>
