@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColor"
     tools:context=".NewPatientDiagnosis">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/textView31"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="27dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="30dp"
+            android:fontFamily="@font/satoshi_variable"
             android:text="Health Record"
+            android:textColor="@color/hintText"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordBloodGroup"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +30,7 @@
         <EditText
             android:id="@+id/updateHealthRecordBloodGroup"
             style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="56dp"
 
             android:layout_marginTop="12dp"
@@ -36,7 +40,8 @@
             android:hint="Blood Group"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
             app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordGenotype"
             app:layout_constraintEnd_toEndOf="@+id/textView31"
             app:layout_constraintStart_toStartOf="@+id/textView31"
@@ -45,7 +50,7 @@
         <EditText
             android:id="@+id/updateHealthRecordGenotype"
             style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="56dp"
 
             android:layout_marginTop="12dp"
@@ -55,7 +60,8 @@
             android:hint="Genotype"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
             app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordDisabilities"
             app:layout_constraintEnd_toEndOf="@+id/updateHealthRecordBloodGroup"
             app:layout_constraintStart_toStartOf="@+id/updateHealthRecordBloodGroup"
@@ -64,7 +70,7 @@
         <EditText
             android:id="@+id/updateHealthRecordDisabilities"
             style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="56dp"
 
             android:layout_marginTop="12dp"
@@ -74,7 +80,8 @@
             android:hint="Disabilities"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
             app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordAllergies"
             app:layout_constraintEnd_toEndOf="@+id/updateHealthRecordGenotype"
             app:layout_constraintStart_toStartOf="@+id/updateHealthRecordGenotype"
@@ -83,7 +90,7 @@
         <EditText
             android:id="@+id/updateHealthRecordAllergies"
             style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="56dp"
 
             android:layout_marginTop="12dp"
@@ -93,37 +100,17 @@
             android:hint="Allergies"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName17"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
             app:layout_constraintEnd_toEndOf="@+id/updateHealthRecordDisabilities"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/updateHealthRecordDisabilities"
             app:layout_constraintTop_toBottomOf="@+id/updateHealthRecordDisabilities" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName17"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
-            android:layout_height="56dp"
-
-            android:layout_marginTop="12dp"
-            android:background="@drawable/etborder"
-            android:ems="10"
-            android:gravity="center_vertical"
-            android:hint="Terminal Illness"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
-            app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordEmail"
-            app:layout_constraintEnd_toEndOf="@+id/updateHealthRecordAllergies"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/updateHealthRecordAllergies"
-            app:layout_constraintTop_toBottomOf="@+id/updateHealthRecordAllergies" />
-
-        <EditText
             android:id="@+id/updateHealthRecordEmail"
             style="@style/Widget.AppCompat.EditText"
-            android:layout_width="351dp"
+            android:layout_width="304dp"
             android:layout_height="56dp"
 
             android:layout_marginTop="12dp"
@@ -133,23 +120,28 @@
             android:hint="Patient's Email"
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
-            android:textColorHint="?attr/colorOnPrimary"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
             app:layout_constraintBottom_toTopOf="@+id/updateHealthRecordbtn"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName17"
-            app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName17"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName17" />
+            app:layout_constraintEnd_toEndOf="@+id/updateHealthRecordAllergies"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/updateHealthRecordAllergies"
+            app:layout_constraintTop_toBottomOf="@+id/updateHealthRecordAllergies" />
 
         <Button
             android:id="@+id/updateHealthRecordbtn"
-            android:layout_width="351dp"
-            android:layout_height="56dp"
+            android:layout_width="304dp"
+            android:layout_height="53dp"
             android:layout_marginStart="30dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="60dp"
+            android:backgroundTint="@android:color/white"
             android:text="Save Records"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
             android:textSize="16sp"
-            app:cornerRadius="15dp"
+            app:cornerRadius="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

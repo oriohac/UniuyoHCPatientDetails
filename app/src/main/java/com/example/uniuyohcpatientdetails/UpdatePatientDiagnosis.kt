@@ -1,8 +1,7 @@
 package com.example.uniuyohcpatientdetails
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.uniuyohcpatientdetails.databinding.ActivityUpdatePatientDiagnosisBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -36,10 +35,10 @@ class UpdatePatientDiagnosis : AppCompatActivity() {
         val email = binding.updatePatientDiagnosisEmail.text
         val medication = binding.medications.text
 
-        val calen = Calendar.getInstance()
-        val day = calen.get(Calendar.DAY_OF_MONTH)
-        var month = calen.get(Calendar.MONTH)+1
-        val year = calen.get(Calendar.YEAR)
+        val calendarRef = Calendar.getInstance()
+        val day = calendarRef.get(Calendar.DAY_OF_MONTH)
+        val month = calendarRef.get(Calendar.MONTH)+1
+        val year = calendarRef.get(Calendar.YEAR)
         val date = "$day-$month-$year"
 
         val db = Firebase.firestore
@@ -61,6 +60,7 @@ class UpdatePatientDiagnosis : AppCompatActivity() {
         )
 
         if (temperature.isNotEmpty() && pulseRate.isNotEmpty() && respirationRate.isNotEmpty() && bloodPressure.isNotEmpty() && bloodPressure2.isNotEmpty() && symptom1.isNotEmpty() || symptom2.isNotEmpty() || symptom3.isNotEmpty() && illness.isNotEmpty() && email.isNotEmpty() && medication.isNotEmpty() ){
+
             db.collection("Diagnosis").document(email.toString()).collection("diagnosis").document().set(diagnosisList).addOnCompleteListener {task->
                 if (task.isSuccessful){
                     Snackbar.make(findViewById(android.R.id.content),"Diagnosis Uploaded Successfully",Snackbar.LENGTH_LONG).show()

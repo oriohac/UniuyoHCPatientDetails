@@ -14,39 +14,56 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniuyoHCPatientDetails">
         <activity
+            android:name=".Home"
+            android:exported="false"
+            android:label="Home"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".OTP"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ForgotPassword"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".UpdatePatientDiagnosis"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".NewPatientDiagnosis"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".patientrecordupdate"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".HealthRecord"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -62,22 +79,29 @@
         </activity>
         <activity
             android:name=".doctors_patient_form"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".Patient"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".Doctor"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".Admin"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".Users"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.UniuyoHCPatientDetails.NoActionBar"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">

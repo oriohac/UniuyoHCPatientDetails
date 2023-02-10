@@ -4,55 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgColor"
     tools:context=".OTP">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/enterOTP"
-        android:layout_width="351dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/etborder"
-        android:ems="10"
-        android:hint="Enter OTP"
-        android:inputType="number"
-        android:paddingLeft="10dp"
-        android:textColorHint="?attr/colorOnPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmitOTP"
-        app:layout_constraintEnd_toEndOf="@+id/textView6"
-        app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        <EditText
+            android:id="@+id/enterOTP"
+            android:layout_width="304dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/etborder"
+            android:ems="10"
+            android:hint="Enter OTP"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="@color/hintText"
+            android:textColorHint="@color/hintText"
+            app:layout_constraintBottom_toTopOf="@+id/btnSubmitOTP"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="347dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="157dp"
-        android:layout_marginEnd="32dp"
-        android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:text="Enter the code sent to your number to confirm it is you."
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/enterOTP"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="304dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="157dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="Enter the code sent to your number to confirm it is you."
+            android:textColor="@color/hintText"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/enterOTP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnSubmitOTP"
-        android:layout_width="355dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="283dp"
-        android:onClick="verify"
-        android:text="Submit OTP"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/enterOTP"
-        app:layout_constraintStart_toStartOf="@+id/enterOTP"
-        app:layout_constraintTop_toBottomOf="@+id/enterOTP" />
+        <Button
+            android:id="@+id/btnSubmitOTP"
+            android:layout_width="304dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="283dp"
+            android:backgroundTint="@color/white"
+            android:onClick="verify"
+            android:text="Submit OTP"
+            android:textAllCaps="false"
+            android:textColor="@color/buttonTextColor"
+            app:cornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/enterOTP"
+            app:layout_constraintStart_toStartOf="@+id/enterOTP"
+            app:layout_constraintTop_toBottomOf="@+id/enterOTP" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

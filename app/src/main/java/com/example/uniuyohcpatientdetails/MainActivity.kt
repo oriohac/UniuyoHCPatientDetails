@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
         Handler(Looper.myLooper()!!).postDelayed({
-            startActivity(Intent(this, Users::class.java))
+            startActivity(Intent(this, Home::class.java))
             finish()
         },1000)
     }
