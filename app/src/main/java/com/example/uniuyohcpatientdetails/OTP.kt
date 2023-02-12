@@ -21,6 +21,9 @@ class OTP : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
+
+
         binding.btnSubmitOTP.setOnClickListener {
 
             if (binding.enterOTP.toString().isEmpty()) {

@@ -67,8 +67,14 @@
             android:layout_height="50dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/etborder"
+
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+
             android:ems="10"
-            android:hint="DOB"
+            android:hint="Date of Birth"
             android:inputType="date"
             android:paddingLeft="10dp"
             android:textColor="@color/hintText"

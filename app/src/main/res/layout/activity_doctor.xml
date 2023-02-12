@@ -65,7 +65,7 @@
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="24dp"
             android:backgroundTint="@android:color/white"
-            android:text="update patient Diagnosis record"
+            android:text="Update Patient Diagnosis Record"
             android:textAllCaps="false"
             android:textColor="@color/buttonTextColor"
             android:textSize="16sp"

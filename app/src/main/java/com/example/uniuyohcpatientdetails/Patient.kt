@@ -60,7 +60,7 @@ class Patient : AppCompatActivity() {
             val biometricPrompt : BiometricPrompt = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 BiometricPrompt.Builder(this)
                     .setTitle("Title")
-                    .setSubtitle("Authenticaion is required")
+                    .setSubtitle("Authentication is required")
                     .setDescription("Fingerprint Authentication")
                     .setNegativeButton("Cancel", this.mainExecutor, DialogInterface.OnClickListener { dialog, which ->
                     }).build()
@@ -131,11 +131,11 @@ class Patient : AppCompatActivity() {
     private fun checkBiometricSupport(): Boolean {
         val keyguardManager : KeyguardManager = getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
         if(!keyguardManager.isKeyguardSecure) {
-            notifyUser("Fingerprint hs not been enabled in settings.")
+            notifyUser("Fingerprint has not been enabled in settings.")
             return false
         }
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.USE_BIOMETRIC) != PackageManager.PERMISSION_GRANTED) {
-            notifyUser("Fingerprint hs not been enabled in settings.")
+            notifyUser("Fingerprint has not been enabled in settings.")
             return false
         }
         return if (packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)) {

@@ -1,5 +1,6 @@
 package com.example.uniuyohcpatientdetails
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.net.IDN
+import java.util.Calendar
 
 class patientrecordupdate : AppCompatActivity() {
     private lateinit var binding: ActivityPatientrecordupdateBinding
@@ -19,11 +21,31 @@ class patientrecordupdate : AppCompatActivity() {
         setContentView(R.layout.activity_patientrecordupdate)
         binding = ActivityPatientrecordupdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
         ok(nameof =  intent.getStringExtra("NameString").toString())
+
         binding.patientRecordUpdatebtn.setOnClickListener {
             update()
         }
+
+        binding.patientUpdateDOB.setOnClickListener {
+            val c = Calendar.getInstance()
+            val yearr = c.get(Calendar.YEAR)
+            val month = c.get(Calendar.MONTH)
+            val day = c.get(Calendar.DAY_OF_MONTH)
+            val datePickerDialog = DatePickerDialog(this@patientrecordupdate,
+                {view,year, monthOfYear, dayOfMonth ->
+                    val dat = (dayOfMonth.toString()+" - "+(monthOfYear+1)+" - "+year)
+                    binding.patientUpdateDOB.setText(dat)
+                },
+            yearr, month, day
+            )
+            datePickerDialog.show()
+        }
+
     }
+
 
     fun ok(nameof : String){
 

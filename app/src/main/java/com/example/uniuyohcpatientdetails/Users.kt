@@ -112,9 +112,10 @@ class Users : AppCompatActivity() {
                                 val user = it.getString("User").toString()
                                 val number = it.getString("Phone").toString()
                                 if (user.equals("Patient") && phoneNumber.equals(number)){
-                                    progressDialog.dismiss()
+                                   // progressDialog.dismiss()
                                     sendVerificationCode(num)
-                                    Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
+                                    progressDialog.dismiss()
+                                   // Toast.makeText(applicationContext, "Login Success", Toast.LENGTH_SHORT).show()
                                 }else if (phoneNumber != number) {
                                     progressDialog.dismiss()
                                     Snackbar.make(findViewById(android.R.id.content), "Please Enter a Corresponding Number", Snackbar.LENGTH_LONG).show()
@@ -247,10 +248,16 @@ class Users : AppCompatActivity() {
     // initializing our callbacks for on
     // verification callback method.
     private val mCallBack: PhoneAuthProvider.OnVerificationStateChangedCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
         // below method is used when
         // OTP is sent from Firebase
         override fun onCodeSent(s: String, forceResendingToken: PhoneAuthProvider.ForceResendingToken) {
             super.onCodeSent(s, forceResendingToken)
+            val progressDialog = ProgressDialog(this@Users)
+            progressDialog.setTitle("Login")
+            progressDialog.setMessage("Authenticating...")
+            progressDialog.setCanceledOnTouchOutside(true)
+            progressDialog.show()
 
             // when we receive the OTP it
 
@@ -260,6 +267,7 @@ class Users : AppCompatActivity() {
 
             // which we have already created.
             holdid = s
+            progressDialog.dismiss()
             startActivity(Intent(applicationContext,OTP::class.java).putExtra("holdid", holdid))
         }
 
