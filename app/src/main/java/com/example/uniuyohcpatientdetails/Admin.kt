@@ -1,5 +1,4 @@
 package com.example.uniuyohcpatientdetails
-
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +17,6 @@ class Admin : AppCompatActivity() {
         setContentView(R.layout.activity_admin)
         binding  = ActivityAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.AdminAddUserbtn.setOnClickListener {
             createUser()
         }
@@ -69,7 +67,4 @@ fun store(){
         Toast.makeText(applicationContext, "Fill all fields", Toast.LENGTH_SHORT).show()
     }
 }
-
-
-
 }

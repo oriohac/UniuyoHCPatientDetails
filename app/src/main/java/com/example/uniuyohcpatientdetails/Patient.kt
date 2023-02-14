@@ -70,11 +70,6 @@ class Patient : AppCompatActivity() {
             biometricPrompt.authenticate(getCancellationSignal(), mainExecutor, authenticationCallback)
         }
     }
-
-
-
-
-
     fun retrieveData(){
         val auth = FirebaseAuth.getInstance()
         val uid = auth.currentUser!!.uid
@@ -82,31 +77,19 @@ class Patient : AppCompatActivity() {
         val userRef = db.collection("USERS")
         userRef.document(uid).get().addOnSuccessListener {
             if (it.exists()) {
-
-
                 val email = it.getString("Email").toString()
                 val name = it.getString("Name").toString()
                 val phone = it.getString("Phone").toString()
                 val dob = it.getString("DOB").toString()
-
-
-                Log.d(TAG, "$email/$name/$phone")
                 binding.patientemail.text = email
                 binding.patientname.text = name
                 binding.patientPhone.text = phone
                 binding.patientDOB.text = dob
-
-
             }
-
         else{
-
                 Log.w(TAG, "Error getting documents.")
-
         }
-
         }
-
     }
     fun movetoeditrecords(){
         val intent = Intent(applicationContext, patientrecordupdate::class.java).putExtra("NameString", binding.patientname.text.toString())
@@ -116,8 +99,6 @@ class Patient : AppCompatActivity() {
         val intent = Intent(applicationContext, HealthRecord::class.java)
         startActivity(intent)
     }
-
-
     private fun notifyUser(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
@@ -142,8 +123,4 @@ class Patient : AppCompatActivity() {
             true
         } else true
     }
-
 }
-
-
-

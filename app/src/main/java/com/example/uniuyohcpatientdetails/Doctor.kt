@@ -14,7 +14,6 @@ class Doctor : AppCompatActivity() {
         setContentView(R.layout.activity_doctor)
         binding = ActivityDoctorBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.doctorCreateDiagnosisRecordbtn.setOnClickListener{
             moveToNewPatientdiagnosis()
         }
